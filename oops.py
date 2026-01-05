@@ -11,6 +11,10 @@ class Student:
     #instance methods
     def getInfo(self):
         print(self.name,self.cgpa,self.clg) #can access class and instance attributes
+    #class methods
+    @classmethod #decorator
+    def getClg(cls):
+        print(f"College Name={cls.clg}")
 
 
 #objects
@@ -28,3 +32,7 @@ print(Student.PI)
 
 #calling instance method
 stu1.getInfo()
+
+#calling Class method
+stu1.getClg()
+Student.getClg()
