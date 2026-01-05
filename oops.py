@@ -15,6 +15,13 @@ class Student:
     @classmethod #decorator
     def getClg(cls):
         print(f"College Name={cls.clg}")
+    #static method 
+    @staticmethod #decorator
+    def checkIfPassed(cgpa):
+        if(cgpa>5):
+            print("Status: Passed")
+        else:
+            print("Status: Failed")
 
 
 #objects
@@ -36,3 +43,8 @@ stu1.getInfo()
 #calling Class method
 stu1.getClg()
 Student.getClg()
+
+#calling static method 
+Student.checkIfPassed(stu1.cgpa)
+Student.checkIfPassed(stu2.cgpa)
+stu1.checkIfPassed(stu2.cgpa)
