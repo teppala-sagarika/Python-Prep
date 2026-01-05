@@ -8,6 +8,9 @@ class Student:
         self.name=name
         self.cgpa=cgpa
         self.PI=3.1
+    #instance methods
+    def getInfo(self):
+        print(self.name,self.cgpa,self.clg) #can access class and instance attributes
 
 
 #objects
@@ -22,3 +25,6 @@ print(stu1.clg)
 print(stu1.name)
 print(stu1.PI)
 print(Student.PI)
+
+#calling instance method
+stu1.getInfo()
