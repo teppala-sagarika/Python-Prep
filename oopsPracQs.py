@@ -16,11 +16,15 @@ class Product:
     @staticmethod
     def calcDiscount(price,percent):
         print(price-(percent*price/100))
+    
+    @classmethod
+    def get_tot(cls):
+        print(cls.tot) 
 
 prod1=Product("laptop",80_000)
 prod2=Product("mobile",58000)
 print(prod1.name,prod2.name)
-print("Total Products:", Product.tot)
+print("Total Products:", Product.get_tot())
 Product.calcDiscount(prod1.price,15)
 Product.calcDiscount(prod2.price,5)
 
