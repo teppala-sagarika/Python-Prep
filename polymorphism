@@ -11,8 +11,23 @@ class Teacher(Employee): #child class
     def get_designation(self): #same func name
         print("designation = TEACHER") #diff implementation
 
+#duck typing 
+class Girl():
+    def get_Gender(self):
+        print("Female")
+
+class Boy():
+    def get_Gender(self):
+        print("Male")
+
 t1=Teacher()
 t1.get_designation() #designation = TEACHER
 
 e1=Employee()
 e1.get_designation() #designation = EMPLOYEE
+
+g1=Girl()
+g1.get_Gender() #Female
+
+b1=Boy()
+b1.get_Gender() #Male
