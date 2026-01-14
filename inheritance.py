@@ -1,5 +1,13 @@
 #Reusing attributes and methods from a Parent/Base Class 
 
+
+#types of inheritance
+#Single level Inheritance
+#Multilevel inheritance
+#Multiple inheritance
+
+
+#Single level inheritance
 class Employee: #parent/base class
     _startTime="10am" #protected
     _endTime="6pm" #protected
@@ -26,12 +34,6 @@ print(t2.subject,t2._startTime,t2._endTime)
 staff1=AdminStaff("Manager")
 print(staff1.role,staff1._startTime,staff1._endTime)
 
-#types of inheritance
-#Single level Inheritance
-#Multilevel inheritance
-#
-
-
 #Multi level inheritance
 class Accountant(AdminStaff): #can have Admin staff attributes as well as Employee attributes
     def __init__(self,salary,role):
@@ -43,7 +45,7 @@ acc1=Accountant(25000,"CA")
 print(acc1.role,acc1.salary,acc1._startTime,acc1._endTime)
  
 
-#Multi level inheritance
+#Multiple inheritance
 class TeachingStaff:
     def __init__(self,salary):
         self.salary=salary
