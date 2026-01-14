@@ -19,7 +19,7 @@ class Product:
     
     @classmethod
     def get_tot(cls):
-        print(cls.tot) 
+        return (cls.tot) 
 
 prod1=Product("laptop",80_000)
 prod2=Product("mobile",58000)
