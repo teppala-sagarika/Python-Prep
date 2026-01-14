@@ -25,3 +25,41 @@ print(t2.subject,t2._startTime,t2._endTime)
 
 staff1=AdminStaff("Manager")
 print(staff1.role,staff1._startTime,staff1._endTime)
+
+#types of inheritance
+#Single level Inheritance
+#Multilevel inheritance
+#
+
+
+#Multi level inheritance
+class Accountant(AdminStaff): #can have Admin staff attributes as well as Employee attributes
+    def __init__(self,salary,role):
+        super().__init__(role)
+        self.salary=salary
+
+acc1=Accountant(25000,"CA")
+
+print(acc1.role,acc1.salary,acc1._startTime,acc1._endTime)
+ 
+
+#Multi level inheritance
+class TeachingStaff:
+    def __init__(self,salary):
+        self.salary=salary
+
+class Student:
+    def __init__(self,cgpa):
+        self.cgpa=cgpa
+
+class TA(TeachingStaff,Student):
+    def __init__(self,salary,cgpa,name):
+        super().__init__(salary) #1st class constructor
+        Student.__init__(self,cgpa) #2nd class constructor
+        self.name=name
+
+ta1=TA(15_000,9.5,"Sagarika")
+
+print(ta1.name,ta1.cgpa,ta1.salary)
+
+
