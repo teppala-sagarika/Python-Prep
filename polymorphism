@@ -1,0 +1,18 @@
+#POLYMORPHISM
+#function overriding
+#duck typing
+
+#function overriding
+class Employee: #parent class
+    def get_designation(self): #same func name
+        print("designation = EMPLOYEE") #diff implementation
+
+class Teacher(Employee): #child class
+    def get_designation(self): #same func name
+        print("designation = TEACHER") #diff implementation
+
+t1=Teacher()
+t1.get_designation() #designation = TEACHER
+
+e1=Employee()
+e1.get_designation() #designation = EMPLOYEE
