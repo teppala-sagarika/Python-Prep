@@ -28,10 +28,16 @@
 
 # f.close()
 
-# w+ mode
-f=open("sample2.txt","w+") #pointer is at beginning of file initially
-#file truncates
-f.write("123")
-print(f.read())
+# # w+ mode
+# f=open("sample2.txt","w+") #pointer is at beginning of file initially
+# #file truncates
+# f.write("123")
+# print(f.read())
 
+# f.close()
+
+# a+ mode
+f=open("sample2.txt","a+") #pointer is at the end of the file initiallly 
+f.write("happy birthday")
+print(f.read())
 f.close()
