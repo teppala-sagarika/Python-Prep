@@ -20,9 +20,17 @@
 # f.close()
 
 # + mode (read and write)
-# r+ mode
-f=open("sample2.txt","r+") #pointer is at beginning of file initially
+# # r+ mode
+# f=open("sample2.txt","r+") #pointer is at beginning of file initially
 
+# f.write("123")
+# print(f.read())
+
+# f.close()
+
+# w+ mode
+f=open("sample2.txt","w+") #pointer is at beginning of file initially
+#file truncates
 f.write("123")
 print(f.read())
 
