@@ -12,9 +12,18 @@
 
 # f.close()
 
-# CREATE A FILE 
-f=open("sample2.txt","x") #file object
+# # CREATE A FILE 
+# f=open("sample2.txt","x") #file object
 
-f.write("Some random text")
+# f.write("Some random text")
+
+# f.close()
+
+# + mode (read and write)
+# r+ mode
+f=open("sample2.txt","r+") #pointer is at beginning of file initially
+
+f.write("123")
+print(f.read())
 
 f.close()
