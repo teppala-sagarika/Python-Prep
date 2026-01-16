@@ -1,3 +1,6 @@
+import os 
+#os - operating system module is imported to enable deletion of files
+
 # FILE OPERATIONS 
 
 #1 Open a file
@@ -28,3 +31,15 @@ f.close()
 with open("sample2.txt","r") as f2:
     data=f2.read()
     print(len(data))
+
+#create a new file and delete it 
+
+#file creation
+# f=open("newFile.txt","x")
+
+# f.write("happy new year")
+
+# f.close()
+
+#file deletion
+os.remove("newFile.txt")
