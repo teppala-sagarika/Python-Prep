@@ -24,6 +24,7 @@ print(data)
 #(its better to close a file after performing the required operations on it)
 f.close()
 
+#with keyword automatically closes the file once all the operations are performed on it
 with open("sample2.txt","r") as f2:
     data=f2.read()
     print(len(data))
